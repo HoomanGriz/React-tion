@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="box-selector.js"></script>
   </head>
   <body>
   <div id="content"></div>
@@ -21,6 +22,7 @@
      //  });
 
      // React.render(<GameTitle />, document.getElementById("content"));
+
 
   var GameWrapper = React.createClass({
       // getInitialState: function() {
@@ -43,30 +45,31 @@
             </div>
 
             <div class="input-color">
-              <button id="bottom-left"><div class="inner">X</div></button>
-              <button id="bottom-right"><div class="inner">X</div></button>
+              <button id="bottom-left"><div class="inner"></div>X</button>
+              <button id="bottom-right"><div class="inner"></div>X</button>
             </div>
           </div>
+
           )
         },
-        var BoxButton = React.createClass({
-          var component = <Button clicked = {false} />;
-          props.clicked = false;
-          getInitialState: function() {
-          return { clicked: false };
-        },
-        handleClick: function (event) {
-          this.setState({ clicked: !this.state.clicked});
-        },
-        render: function() {
-          var text = this.state.clicked ? 'clicked' : 'not clicked';
-          return (
-          <p onClick={this.handleClick}>
-            You {text} this. Click to toggle.
-          </p>
-          );
-        }
-      });
+      //   var BoxButton = React.createClass({
+      //     var component = '<Button clicked = {false} />';
+      //     props.clicked = false;
+      //     getInitialState: function() {
+      //     return { clicked: false };
+      //   },
+      //   handleClick: function (event) {
+      //     this.setState({ clicked: !this.state.clicked});
+      //   },
+      //   render: function() {
+      //     var text = this.state.clicked ? 'clicked' : 'not clicked';
+      //     return (
+      //     <p onClick={this.handleClick}>
+      //       You {text} this. Click to toggle.
+      //     </p>
+      //     );
+      //   }
+      // });
     });
 
       React.render(
@@ -74,6 +77,8 @@
       );
 
     </script>
+
+
   </body>
 </html>
       <!-- var BoxButton = React.createClass({
